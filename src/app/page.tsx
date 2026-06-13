@@ -12,6 +12,7 @@ import { ProductCard } from "@/components/ProductCard";
 import { MERCH_ITEMS } from "@/data/merch";
 import { BLOG_POSTS } from "@/data/blog";
 import { formatSoles } from "@/lib/format";
+import { ZodiacPopup } from "@/components/ZodiacPopup";
 
 export default async function Home() {
   const [categories, products] = await Promise.all([
@@ -44,12 +45,10 @@ export default async function Home() {
             >
               Ver la carta <ArrowRight size={16} />
             </Link>
-            <Link
-              href="/nosotros"
-              className="border border-accent text-accent rounded-2xl px-6 py-3 font-bold hover:bg-accent/10 transition-colors"
-            >
-              Conócenos
-            </Link>
+            <ZodiacPopup
+              triggerLabel="Tu zodiaco chino"
+              triggerClassName="border border-accent text-accent rounded-2xl px-6 py-3 font-bold hover:bg-accent/10 transition-colors inline-flex items-center gap-2"
+            />
           </div>
         </div>
       </section>

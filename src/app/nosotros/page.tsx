@@ -1,5 +1,31 @@
-import { Award, ChefHat, Flame, Heart, MapPin, Users } from "lucide-react";
-import { ZodiacPopup } from "@/components/ZodiacPopup";
+import { ChefHat, Flame, Heart, MapPin, Rocket, Sprout, Store, Users } from "lucide-react";
+
+const TIMELINE = [
+  {
+    year: "2015",
+    title: "Una cocina familiar",
+    desc: "Todo empezó en la cocina de casa, perfeccionando recetas chifas heredadas de generación en generación.",
+    icon: Sprout,
+  },
+  {
+    year: "2018",
+    title: "Primer local",
+    desc: "Abrimos nuestras puertas con un pequeño local de barrio y un wok que nunca se apaga.",
+    icon: Store,
+  },
+  {
+    year: "2022",
+    title: "Delivery y pedidos online",
+    desc: "Llevamos el sabor chifa a toda Lima con delivery a domicilio y pagos por Yape.",
+    icon: Rocket,
+  },
+  {
+    year: "2026",
+    title: "Receta Chifera hoy",
+    desc: "Seguimos creciendo con nuevas recetas, merchandising y experiencias para nuestra comunidad.",
+    icon: ChefHat,
+  },
+];
 
 export default function NosotrosPage() {
   return (
@@ -58,20 +84,24 @@ export default function NosotrosPage() {
       </section>
 
       <section className="max-w-3xl mx-auto px-4 py-10 pb-20">
-        <div className="bg-gradient-to-br from-primary/20 via-surface to-surface rounded-3xl p-6 md:p-10 text-center border border-accent/30">
-          <div className="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4">
-            <Award size={26} className="text-accent" />
-          </div>
-          <h2 className="text-2xl md:text-3xl font-extrabold">
-            ¿Cuál es tu signo zodiacal chino?
-          </h2>
-          <p className="text-muted mt-2 max-w-md mx-auto leading-6">
-            Ingresa tu fecha de nacimiento y tu correo: te diremos tu signo del
-            zodiaco chino y te suscribiremos a nuestros boletines con promos
-            exclusivas.
-          </p>
-          <div className="mt-6 flex justify-center">
-            <ZodiacPopup />
+        <h2 className="text-2xl md:text-3xl font-extrabold text-center mb-10">
+          Nuestra historia
+        </h2>
+        <div className="relative pl-10">
+          <div className="absolute left-4 top-2 bottom-2 w-px bg-surface-2" />
+          <div className="space-y-8">
+            {TIMELINE.map((step) => (
+              <div key={step.year} className="relative">
+                <div className="absolute -left-10 top-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+                  <step.icon size={16} className="text-primary" />
+                </div>
+                <span className="text-accent text-xs font-bold uppercase tracking-wide">
+                  {step.year}
+                </span>
+                <h3 className="font-bold text-lg mt-1">{step.title}</h3>
+                <p className="text-muted text-sm mt-1 leading-6">{step.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

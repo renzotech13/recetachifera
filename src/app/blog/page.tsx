@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { Award } from "lucide-react";
 import { BLOG_POSTS } from "@/data/blog";
+import { ZodiacPopup } from "@/components/ZodiacPopup";
 
 export default function BlogPage() {
   return (
@@ -34,6 +36,23 @@ export default function BlogPage() {
             </p>
           </Link>
         ))}
+      </div>
+
+      <div className="mt-12 bg-gradient-to-br from-primary/20 via-surface to-surface rounded-3xl p-6 md:p-10 text-center border border-accent/30">
+        <div className="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4">
+          <Award size={26} className="text-accent" />
+        </div>
+        <h2 className="text-2xl md:text-3xl font-extrabold">
+          ¿Cuál es tu signo zodiacal chino?
+        </h2>
+        <p className="text-muted mt-2 max-w-md mx-auto leading-6">
+          Ingresa tu fecha de nacimiento y tu correo: te diremos tu signo del
+          zodiaco chino y te suscribiremos a nuestros boletines con promos
+          exclusivas.
+        </p>
+        <div className="mt-6 flex justify-center">
+          <ZodiacPopup />
+        </div>
       </div>
     </div>
   );
