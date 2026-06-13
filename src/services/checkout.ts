@@ -20,7 +20,7 @@ export function buildWhatsappOrderMessage(
     paymentMethod === "yape" ? "Yape (ya envié el pago, adjunto captura)" : "Efectivo al delivery";
 
   return [
-    "¡Hola Receta Chifera! 🥡 Quiero hacer este pedido:",
+    "¡Hola Receta Chifera! Quiero hacer este pedido:",
     "",
     ...lines,
     "",

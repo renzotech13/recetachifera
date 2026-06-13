@@ -10,8 +10,8 @@ export function MerchCard({ item }: { item: MerchItem }) {
 
   return (
     <div className="bg-surface rounded-2xl p-4 flex flex-col">
-      <div className="w-full aspect-square rounded-xl bg-surface-2 flex items-center justify-center mb-3 text-5xl relative">
-        {item.image}
+      <div className="w-full aspect-square rounded-xl bg-surface-2 flex items-center justify-center mb-3 relative">
+        <item.icon size={40} className="text-accent" />
         {item.badge && (
           <span className="absolute top-2 left-2 bg-accent text-background text-[10px] font-bold px-2 py-1 rounded-full">
             {item.badge}

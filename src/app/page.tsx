@@ -127,7 +127,9 @@ export default async function Home() {
           <div className="grid grid-cols-2 gap-3 w-full md:w-auto">
             {MERCH_ITEMS.slice(0, 2).map((item) => (
               <div key={item.id} className="bg-surface-2 rounded-2xl p-4 w-36">
-                <div className="text-3xl mb-2">{item.image}</div>
+                <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center mb-2">
+                  <item.icon size={18} className="text-accent" />
+                </div>
                 <p className="text-xs font-semibold line-clamp-1">{item.name}</p>
                 <p className="text-accent text-sm font-bold mt-1">
                   {formatSoles(item.priceCents)}
@@ -152,7 +154,9 @@ export default async function Home() {
               href={`/blog/${post.slug}`}
               className="bg-surface rounded-2xl p-5 hover:bg-surface-2 transition-colors"
             >
-              <span className="text-3xl">{post.image}</span>
+              <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
+                <post.icon size={18} className="text-accent" />
+              </div>
               <span className="block text-accent text-xs font-bold mt-3 uppercase tracking-wide">
                 {post.tag}
               </span>

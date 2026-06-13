@@ -26,7 +26,9 @@ export default async function BlogPostPage({
         <ArrowLeft size={16} /> Volver al blog
       </Link>
 
-      <span className="text-5xl">{post.image}</span>
+      <div className="w-16 h-16 rounded-2xl bg-primary/20 flex items-center justify-center">
+        <post.icon size={28} className="text-accent" />
+      </div>
       <span className="block text-accent text-xs font-bold mt-4 uppercase tracking-wide">
         {post.tag}
       </span>

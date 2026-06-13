@@ -16,7 +16,9 @@ export default function BlogPage() {
             href={`/blog/${post.slug}`}
             className="bg-surface rounded-2xl p-6 hover:bg-surface-2 transition-colors"
           >
-            <span className="text-4xl">{post.image}</span>
+            <div className="w-12 h-12 rounded-2xl bg-primary/20 flex items-center justify-center">
+              <post.icon size={22} className="text-accent" />
+            </div>
             <span className="block text-accent text-xs font-bold mt-3 uppercase tracking-wide">
               {post.tag}
             </span>

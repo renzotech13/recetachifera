@@ -1,3 +1,5 @@
+"use client";
+
 import { MERCH_ITEMS } from "@/data/merch";
 import { MerchCard } from "@/components/MerchCard";
 

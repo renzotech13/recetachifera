@@ -1,3 +1,5 @@
+import type { LucideIcon } from "lucide-react";
+
 export type Category = {
   id: string;
   name: string;
@@ -25,7 +27,7 @@ export type MerchItem = {
   name: string;
   description: string;
   priceCents: number;
-  image: string;
+  icon: LucideIcon;
   badge?: string;
 };
 
@@ -45,6 +47,6 @@ export type BlogPost = {
   content: string[];
   date: string;
   author: string;
-  image: string;
+  icon: LucideIcon;
   tag: string;
 };

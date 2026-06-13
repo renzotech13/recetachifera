@@ -1,3 +1,13 @@
+import {
+  Coffee,
+  Crown,
+  KeyRound,
+  Lamp,
+  ShoppingBag,
+  Shirt,
+  Utensils,
+  Wind,
+} from "lucide-react";
 import type { MerchItem } from "@/types";
 
 export const MERCH_ITEMS: MerchItem[] = [
@@ -7,7 +17,7 @@ export const MERCH_ITEMS: MerchItem[] = [
     description:
       "Polo negro 100% algodón con bordado de dragón dorado y logo Receta Chifera.",
     priceCents: 4900,
-    image: "👕",
+    icon: Shirt,
     badge: "Más vendido",
   },
   {
@@ -15,14 +25,14 @@ export const MERCH_ITEMS: MerchItem[] = [
     name: "Taza 'Chaufa Lover'",
     description: "Taza de cerámica negra con detalles dorados y frase chifa.",
     priceCents: 2500,
-    image: "☕",
+    icon: Coffee,
   },
   {
     id: "merch-llavero-suerte",
     name: "Llavero de la Suerte",
     description: "Llavero metálico con gato de la suerte (Maneki-neko) dorado.",
     priceCents: 1500,
-    image: "🐱",
+    icon: KeyRound,
     badge: "Nuevo",
   },
   {
@@ -30,35 +40,35 @@ export const MERCH_ITEMS: MerchItem[] = [
     name: "Gorra Receta Chifera",
     description: "Gorra negra bordada con el logo y detalles rojo/dorado.",
     priceCents: 3900,
-    image: "🧢",
+    icon: Crown,
   },
   {
     id: "merch-abanico",
     name: "Abanico Chino Decorativo",
     description: "Abanico plegable de tela roja con estampado dorado tradicional.",
     priceCents: 2000,
-    image: "🪭",
+    icon: Wind,
   },
   {
     id: "merch-linterna",
     name: "Linterna de Papel Roja",
     description: "Linterna decorativa roja con borlas doradas, ideal para regalo.",
     priceCents: 1800,
-    image: "🏮",
+    icon: Lamp,
   },
   {
     id: "merch-palitos",
     name: "Set de Palitos Chinos",
     description: "Par de palitos de madera con estuche grabado Receta Chifera.",
     priceCents: 1200,
-    image: "🥢",
+    icon: Utensils,
   },
   {
     id: "merch-bolso-tote",
     name: "Tote Bag 'Wok Life'",
     description: "Bolso de tela resistente, negro con estampado rojo/dorado.",
     priceCents: 2900,
-    image: "👜",
+    icon: ShoppingBag,
     badge: "Eco",
   },
 ];

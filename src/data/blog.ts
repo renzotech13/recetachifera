@@ -1,3 +1,4 @@
+import { BookOpen, ChefHat, Smartphone, Utensils } from "lucide-react";
 import type { BlogPost } from "@/types";
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -14,7 +15,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     date: "2026-05-12",
     author: "Equipo Receta Chifera",
-    image: "🍚",
+    icon: ChefHat,
     tag: "Cultura chifa",
   },
   {
@@ -30,7 +31,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     date: "2026-04-20",
     author: "Equipo Receta Chifera",
-    image: "🏮",
+    icon: BookOpen,
     tag: "Historia",
   },
   {
@@ -49,7 +50,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     date: "2026-03-02",
     author: "Equipo Receta Chifera",
-    image: "📱",
+    icon: Smartphone,
     tag: "Guías",
   },
   {
@@ -64,7 +65,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     date: "2026-02-14",
     author: "Equipo Receta Chifera",
-    image: "🥟",
+    icon: Utensils,
     tag: "Recetas",
   },
 ];
