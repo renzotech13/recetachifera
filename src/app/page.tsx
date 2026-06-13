@@ -45,10 +45,10 @@ export default async function Home() {
               Ver la carta <ArrowRight size={16} />
             </Link>
             <Link
-              href="/merch"
+              href="/nosotros"
               className="border border-accent text-accent rounded-2xl px-6 py-3 font-bold hover:bg-accent/10 transition-colors"
             >
-              Merchandising chino
+              Conócenos
             </Link>
           </div>
         </div>

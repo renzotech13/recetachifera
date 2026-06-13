@@ -31,3 +31,19 @@ export async function getProduct(id: string): Promise<Product | null> {
   if (error) return null;
   return data;
 }
+
+export async function subscribeZodiac(input: {
+  email: string;
+  birthDate: string;
+  zodiacAnimal: string;
+  zodiacElement: string;
+}): Promise<void> {
+  const { error } = await supabase.from("zodiac_subscribers").insert({
+    email: input.email,
+    birth_date: input.birthDate,
+    zodiac_animal: input.zodiacAnimal,
+    zodiac_element: input.zodiacElement,
+  });
+
+  if (error) throw error;
+}

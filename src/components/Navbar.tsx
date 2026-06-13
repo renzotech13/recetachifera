@@ -9,6 +9,7 @@ const LINKS = [
   { href: "/menu", label: "Carta" },
   { href: "/merch", label: "Merchandising" },
   { href: "/blog", label: "Blog" },
+  { href: "/nosotros", label: "Nosotros" },
 ];
 
 export function Navbar() {
