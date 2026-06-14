@@ -2,7 +2,7 @@ import type { CartItem } from "@/types";
 import { formatSoles } from "@/lib/format";
 import { cartSubtotalCents } from "@/state/cartStore";
 
-const RESTAURANT_WHATSAPP = "51957298683";
+export const RESTAURANT_WHATSAPP = "51957298683";
 export const YAPE_NUMBER = "957 298 683";
 export const YAPE_HOLDER_NAME = "Carlos Tou";
 
@@ -30,6 +30,20 @@ export function buildWhatsappOrderMessage(
     `Dirección de entrega: ${address}`,
     `Método de pago: ${paymentLabel}`,
   ].join("\n");
+}
+
+export function buildWhatsappZodiacUrl(
+  email: string,
+  zodiacAnimal: string,
+  zodiacElement: string
+): string {
+  const message = [
+    "¡Hola Receta Chifera!",
+    `Mi zodiaco chino es ${zodiacElement} ${zodiacAnimal}.`,
+    `Mi correo es ${email}.`,
+    "Quiero recibir promociones y novedades.",
+  ].join("\n");
+  return `https://wa.me/${RESTAURANT_WHATSAPP}?text=${encodeURIComponent(message)}`;
 }
 
 export function buildWhatsappOrderUrl(

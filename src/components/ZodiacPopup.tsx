@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, PartyPopper, Sparkles, X } from "lucide-react";
+import { Mail, MessageCircle, PartyPopper, Sparkles, X } from "lucide-react";
 import { subscribeZodiac } from "@/lib/data";
+import { buildWhatsappZodiacUrl } from "@/services/checkout";
 import { getChineseZodiac } from "@/lib/zodiac";
 
 const MONTHS = [
@@ -200,9 +201,17 @@ export function ZodiacPopup({
                     promociones especiales en tu correo.
                   </p>
                 </div>
+                <a
+                  href={buildWhatsappZodiacUrl(email, result.animal, result.element)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-[#25D366] text-background hover:opacity-90 transition-opacity rounded-2xl py-4 font-bold mt-4 flex items-center justify-center gap-2"
+                >
+                  <MessageCircle size={18} /> Avísame por WhatsApp
+                </a>
                 <button
                   onClick={handleClose}
-                  className="w-full bg-primary hover:bg-primary-dark transition-colors rounded-2xl py-4 font-bold mt-6"
+                  className="w-full bg-primary hover:bg-primary-dark transition-colors rounded-2xl py-4 font-bold mt-3"
                 >
                   Cerrar
                 </button>
